@@ -64,7 +64,7 @@
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       var item = document.getElementById("recordingslist").childNodes[0];
-      var item2 = document.getElementById("recordingslist").childNodes[1];
+      var item2 = document.getElementById("recordingslist").childNodes[0];
       au.controls = true;
       au.src = url;
       hf.href = url;
@@ -74,7 +74,7 @@
       li.appendChild(hf);
       recordingslist.appendChild(li);
       item.replaceChild(au, item.childNodes[0]);
-      item2.replaceChild(hf, item.childNodes[1]);
+      item2.replaceChild(hf, item.childNodes[0]);
     });
 
     
