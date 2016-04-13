@@ -70,7 +70,7 @@
       hf.download = new Date().toISOString() + '.wav';
       hf.innerHTML = hf.download;
       li.appendChild(au);
-      //li.appendChild(hf);
+      li.appendChild(hf);
       recordingslist.appendChild(li);
       item.replaceChild(li, item.childNodes[0]);
     });
