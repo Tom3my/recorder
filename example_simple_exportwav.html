@@ -69,9 +69,9 @@
       hf.href = url;
       hf.download = new Date().toISOString() + '.wav';
       hf.innerHTML = hf.download;
-      li.addChild(au);
-      li.addChild(hf);
-      recordingslist.addChild(li);
+      li.replaceChild(au);
+      li.replaceChild(hf);
+      recordingslist.replaceChild(li);
     });
   }
 
@@ -83,8 +83,8 @@
       window.URL = window.URL || window.webkitURL;
       
       audio_context = new AudioContext;
-      __log('Audio context set up.');
-      __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
+     // __log('Audio context set up.');
+    //  __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
     } catch (e) {
       alert('No web audio support in this browser!');
     }
