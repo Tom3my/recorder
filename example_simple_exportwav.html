@@ -60,7 +60,7 @@
   function createDownloadLink() {
     recorder && recorder.exportWAV(function(blob) {
       var url = URL.createObjectURL(blob);
-      //var li = document.createElement('li');
+      var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       au.controls = true;
@@ -68,12 +68,12 @@
       hf.href = url;
       hf.download = 'text.wav';
       hf.innerHTML = hf.download;
-      //li.appendChild(au);
-      //li.appendChild(hf);
-      //recordingslist.appendChild(au);
+      li.appendChild(au);
+      li.appendChild(hf);
+      recordingslist.appendChild(li);
       //recordingslist.appendChild(hf);
-      recordingslist.addChild(au);
-      recordingslist.addChild(hf);
+      //recordingslist.addChild(au);
+      //recordingslist.addChild(hf);
 
     });
 
