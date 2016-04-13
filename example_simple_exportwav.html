@@ -51,7 +51,10 @@
     button.previousElementSibling.disabled = false;
     button.nextElementSibling.disabled = false;
    // __log('Stopped recording.');
-    
+  }
+        function downLoad(button)  {
+    	recorder && recorder.play();
+
     // create WAV download link using audio data blob
     createDownloadLink();
     
@@ -76,11 +79,8 @@
       item.replaceChild(li, item.childNodes[0]);
       
     });
-    function downLoad(button)  {
-    	hf.href = url;
-    	hf.download = 'text.wav';
-    	hf.innerHTML = hf.download;
-    }
+
+    
   }
 
   window.onload = function init() {
