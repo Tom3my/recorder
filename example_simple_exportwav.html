@@ -65,6 +65,8 @@
       var hf = document.createElement('a');
       var item = document.getElementById("recordingslist").childNodes[0];
       var item2 = document.getElementById("recordingslist").childNodes[1];
+      item.replaceChild(au, item.childNodes[0]);
+      item2.replaceChild(hf, item.childNodes[1]);
       au.controls = true;
       au.src = url;
       hf.href = url;
@@ -74,8 +76,7 @@
       //li.appendChild(hf);
       recordingslist.appendChild(au);
       recordingslist.appendChild(hf);
-      item.replaceChild(au, item.childNodes[0]);
-      item2.replaceChild(hf, item.childNodes[1]);
+
     });
 
     
