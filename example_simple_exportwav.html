@@ -63,8 +63,8 @@
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
-      var item = document.getElementById("recordingslist").childNodes[au];
-      var item2 = document.getElementById("recordingslist").childNodes[hf];
+      var item = document.getElementById("recordingslist").childNodes[0];
+      var item2 = document.getElementById("recordingslist").childNodes[0];
       au.controls = true;
       au.src = url;
       hf.href = url;
@@ -73,8 +73,8 @@
       li.appendChild(au);
       li.appendChild(hf);
       recordingslist.appendChild(li);
-      item.replaceChild(li, item.childNodes[au]);
-      item2.replaceChild(li, item.childNodes[hf]);
+      item.replaceChild(au, item.childNodes[0]);
+      item2.replaceChild(hf, item.childNodes[0]);
     });
   }
 
