@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  <button onclick="downLoad(this);" disabled>opslaan</button>
+
 
   <ul id="recordingslist"></ul>
   
@@ -49,7 +49,6 @@
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
-    button.nextElementSibling.disabled = false;
    // __log('Stopped recording.');
 
     // create WAV download link using audio data blob
@@ -69,7 +68,7 @@
       au.controls = true;
       au.src = url;
       hf.href = url;
-      hf.download = new Date() + '.wav';
+      hf.download = new Date().toString() + '.wav';
       hf.innerHTML = hf.download;
       li.appendChild(au);
       li.appendChild(hf);
