@@ -69,7 +69,6 @@
       //au.controls = true;
       au.autoplay = true;
       au.src = url;
-      klikPlay(au.play);
       hf.href = url;
       hf.download = 'text.wav';
       hf.innerHTML = hf.download;
@@ -79,6 +78,8 @@
       //recordingslist.appendChild(hf);
       //recordingslist.addChild(au);
       //recordingslist.addChild(hf);
+      audioClip = getAudioClip(getCodeBase(), "text.wav");
+      onclick.klikPlay(audioClip.play());
 
     });
 
