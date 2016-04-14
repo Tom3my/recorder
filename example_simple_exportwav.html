@@ -64,9 +64,17 @@
    
   function createDownloadLink() {
     recorder && recorder.exportWAV(function(blob) {
-      var item = document.getElementById("recordingslist").childNodes[0];
-      var item2 = document.getElementById("downloads").childNodes[0];
-
+      //var item = document.getElementById("recordingslist").childNodes[0];
+     // var item2 = document.getElementById("downloads").childNodes[0];
+     var list = document.getElementById("recordingslist");
+     var list2 = document.getElementById("downloads");
+// If the <ul> element has any child nodes, remove its first child node
+    if (list.hasChildNodes()) {
+    list.removeChild(list.childNodes[0]);
+}
+    if (list2.hasChildNodes()) {
+    list2.removeChild(list2.childNodes[0]);
+}
       var url = URL.createObjectURL(blob);
       //var li = document.createElement('li');
       var au = document.createElement('audio');
@@ -82,11 +90,11 @@
       //li.appendChild(au);
       //li.appendChild(hf);
       //recordingslist.appendChild(li);
-      //recordingslist.appendChild(au);
-      //downloads.appendChild(hf);
+      recordingslist.appendChild(au);
+      downloads.appendChild(hf);
       // recordingslist.removeChild(au);
-      item.appendChild(au);
-      item2.appendChild(hf);
+      //item.appendChild(au);
+      //item2.appendChild(hf);
       //recordingslist.removeChild(hf);
 
       //recordingslist.addChild(hf);
