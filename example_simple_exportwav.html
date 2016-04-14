@@ -58,10 +58,7 @@
     
     recorder.clear();
   }
-    function klikPlay(button) {
-    	var aud = document.getElementsByTagName('au');
-    	aud.play();
-    }
+   
    
   function createDownloadLink() {
     recorder && recorder.exportWAV(function(blob) {
@@ -72,6 +69,7 @@
       //au.controls = true;
       au.autoplay = true;
       au.src = url;
+      klikPlay(au.play);
       hf.href = url;
       hf.download = 'text.wav';
       hf.innerHTML = hf.download;
