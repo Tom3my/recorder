@@ -50,7 +50,7 @@
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
-    button.nextElementSibling.disabled = false;
+    //button.nextElementSibling.disabled = false;
    // __log('Stopped recording.');
 
     // create WAV download link using audio data blob
@@ -68,7 +68,7 @@
       var hf = document.createElement('a');
       au.controls = true;
       au.play();
-     //au.autoplay = true;
+      au.autoplay = true;
       au.src = url;
       hf.href = url;
       hf.download = 'text.wav';
