@@ -108,9 +108,9 @@
   window.onload = function init() {
     try {
       // webkit shim
-      window.AudioContext = window.AudioContext || window.webkitAudioContext;
-      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
-      window.URL = window.URL || window.webkitURL;
+      window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.oAudioContext || window.msAudioContext;
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
+      window.URL = window.URL || window.webkitURL || window.mozURL || window.oURL || window.msURL;
       
       audio_context = new AudioContext;
      // __log('Audio context set up.');
