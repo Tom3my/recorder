@@ -67,13 +67,13 @@
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       au.controls = true;
-      au.play();
+      //au.play();
       au.autoplay = true;
       au.src = url;
       hf.href = url;
       hf.download = 'text.wav';
       hf.innerHTML = hf.download;
-      //li.appendChild(au);
+      li.appendChild(au);
       li.appendChild(hf);
       recordingslist.appendChild(li);
       //recordingslist.appendChild(hf);
