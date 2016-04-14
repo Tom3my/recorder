@@ -11,6 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
+  <button onclick="document.getElementById('au').play()" disabled>afspelen</button>
 
 
   <ul id="recordingslist"></ul>
@@ -49,6 +50,7 @@
     recorder && recorder.stop();
     button.disabled = true;
     button.previousElementSibling.disabled = false;
+    button.nextElementSibling.disabled = false;
    // __log('Stopped recording.');
 
     // create WAV download link using audio data blob
