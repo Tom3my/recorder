@@ -58,7 +58,10 @@
     
     recorder.clear();
   }
-
+    function klikPlay(button) {
+    	var aud = document.getElementsByTagName('au');
+    	aud.play();
+    }
    
   function createDownloadLink() {
     recorder && recorder.exportWAV(function(blob) {
@@ -79,11 +82,6 @@
       //recordingslist.addChild(au);
       //recordingslist.addChild(hf);
 
-    }
-    
-    function klikPlay(button) {
-    	var aud = document.getElementsByTagName('au');
-    	aud.play();
     });
 
     
