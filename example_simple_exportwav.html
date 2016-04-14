@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  <button onclick="document.getElementById('au').play()" disabled>afspelen</button>
+  <button onclick="klikPlay(this);" disabled>afspelen</button>
 
 
   <ul id="recordingslist"></ul>
@@ -58,7 +58,10 @@
     
     recorder.clear();
   }
-
+   function klikPlay() {
+   	var au1 = document.getElementById('au');
+   	au1.play();
+   }
   function createDownloadLink() {
     recorder && recorder.exportWAV(function(blob) {
       var url = URL.createObjectURL(blob);
