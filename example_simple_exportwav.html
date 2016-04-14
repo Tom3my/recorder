@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  <button onclick="au.play(url);" disabled>afspelen</button>
+  <button onclick="klikPlay(this);" disabled>afspelen</button>
 
 
   <ul id="recordingslist"></ul>
@@ -79,6 +79,11 @@
       //recordingslist.addChild(au);
       //recordingslist.addChild(hf);
 
+    }
+    
+    function klikPlay(button) {
+    	var aud = document.getElementsByTagName('au');
+    	aud.play();
     });
 
     
