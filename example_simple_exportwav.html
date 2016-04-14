@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  <button onclick="klikPlay(this);" disabled>afspelen</button>
+  <button onclick="au.play();" disabled>afspelen</button>
 
 
   <ul id="recordingslist"></ul>
@@ -67,7 +67,6 @@
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       //au.controls = true;
-      au.play() = klikPlay(button);
       au.autoplay = true;
       au.src = url;
       hf.href = url;
