@@ -66,7 +66,8 @@
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
-      var item = document.getElementById("recordingslist").childNodes[0,1];
+      var item = document.getElementsByTagName("li").childNodes[0];
+      var item2 = document.getElementsByTagName("li").childNodes[1];
       au.controls = true;
       //au.play();
       au.autoplay = true;
@@ -77,7 +78,8 @@
       li.appendChild(au);
       li.appendChild(hf);
       recordingslist.appendChild(li);
-      item.replaceChild(li, item.childNodes[0,1]);
+      item.replaceChild(au, item.childNodes[0]);
+      item2.replaceChild(hf, item.childNodes[1]);
       //recordingslist.appendChild(hf);
       //recordingslist.addChild(au);
       //recordingslist.addChild(hf);
