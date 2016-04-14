@@ -66,8 +66,8 @@
       //var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
-      //var item = document.getElementById("li").childNodes[0];
-      //var item2 = document.getElementById("li").childNodes[1];
+      var item = document.getElementById("recordingslist").childNodes[0];
+      var item2 = document.getElementById("recordingslist").childNodes[1];
       au.controls = true;
       //au.play();
       au.autoplay = true;
@@ -78,12 +78,12 @@
       //li.appendChild(au);
       //li.appendChild(hf);
       //recordingslist.appendChild(li);
-      //item.replaceChild(au, item.childNodes[0]);
-      //item2.replaceChild(hf, item.childNodes[1]);
-      recordingslist.appendChild(hf);
+ 
       recordingslist.appendChild(au);
+      recordingslist.appendChild(hf);
       //recordingslist.addChild(hf);
-
+      item.replaceChild(au, item.childNodes[0]);
+      item2.replaceChild(hf, item.childNodes[1]);
 
     });
 
