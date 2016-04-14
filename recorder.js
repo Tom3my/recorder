@@ -78,7 +78,7 @@
   };
 
   Recorder.forceDownload = function(blob, filename){
-    var url = (window.URL || window.webkitURL).createObjectURL(blob);
+    var url = (window.URL || window.webkitURL || window.mozURL || window.oURL || window.msURL).createObjectURL(blob);
     var link = window.document.createElement('a');
     link.href = url;
     link.download = filename || 'output.wav';
