@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  <button onclick="klikPlay(this);" disabled>afspelen</button>
+  
 
 
   <ul id="recordingslist"></ul>
@@ -66,7 +66,7 @@
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
-      //au.controls = true;
+      au.controls = true;
       au.autoplay = true;
       au.src = url;
       hf.href = url;
@@ -78,12 +78,11 @@
       //recordingslist.appendChild(hf);
       //recordingslist.addChild(au);
       //recordingslist.addChild(hf);
-      audioClip = getAudioClip(getCodeBase(), "text.wav");
-      onclick.klikPlay(audioClip.play());
+
 
     });
 
-    
+    <button onclick="document.getElementById('au').play()">Play Music</button>
   }
 
   window.onload = function init() {
