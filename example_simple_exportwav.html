@@ -11,7 +11,7 @@
 
   <button onclick="startRecording(this);">opnemen</button>
   <button onclick="stopRecording(this);" disabled>stoppen</button>
-  
+ // <button onclick="myPlay()">afspelen</button>
 
 
   <ul id="recordingslist"></ul>
@@ -67,7 +67,8 @@
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       au.controls = true;
-      au.autoplay = true;
+      au.play();
+     //au.autoplay = true;
       au.src = url;
       hf.href = url;
       hf.download = 'text.wav';
@@ -82,7 +83,7 @@
 
     });
 
-    <button onclick="document.getElementById('au').play()">Play Music</button>
+    
   }
 
   window.onload = function init() {
